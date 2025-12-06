@@ -42,6 +42,7 @@ const registerUser= asyncHandler(async(req, res)=> {
     res.status(201).json({message: "User registered successfully", user: userObj});
 });
 
+//login user
 const loginUser= asyncHandler(async(req, res)=> {
     const {email, password}= req.body;
     if(!email || !password) {
@@ -71,6 +72,7 @@ const loginUser= asyncHandler(async(req, res)=> {
     res.json({message: "Login the user"});
 });
 
+//private
 const currentUser= asyncHandler(async(req, res)=> {
     res.json({message: "Current user information"});
 });
